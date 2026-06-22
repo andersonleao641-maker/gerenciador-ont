@@ -2,3 +2,4 @@ flet
 gunicorn
 requests
 uvicorn
+flet-fastapi
