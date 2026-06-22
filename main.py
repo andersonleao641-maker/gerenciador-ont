@@ -1,6 +1,5 @@
 import flet as ft
 import flet_fastapi
-
 import requests
 import threading
 import time
