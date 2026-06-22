@@ -171,5 +171,7 @@ def main(page: ft.Page):
 
 # IMPORTANTE: Configurado para rodar como WEB APP na nuvem
 # Em vez de rodar direto, criamos a variável 'app' que o Render precisa
-app = ft.app(target=main, assets_dir="assets", view=ft.AppView.WEB_BROWSER, export_asgi=True)
+# FORMATO OFICIAL RECENTE DO FLET PARA NUVEM (UVICORN):
+app = ft.fastapi_app(main)
+
 
