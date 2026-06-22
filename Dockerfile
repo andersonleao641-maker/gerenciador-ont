@@ -15,4 +15,5 @@ COPY . .
 
 EXPOSE 8000
 
-CMD ["gunicorn", "main:app", "-b", "0.0.0.0:8000", "-k", "uvicorn.workers.UvicornWorker"]
+# COMANDO ATUALIZADO EXCLUSIVO PARA O FLET:
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
