@@ -110,12 +110,12 @@ def main(page: ft.Page):
 
             container_item = ft.Container(
                 content=ft.Row([
-                    ft.Icon(ft.Icons.CELLPHONE, color="#00B37E"),
+                    ft.Icon(ft.icons.CELLPHONE, color="#00B37E"),
                     ft.Column([
                         ft.Text(input_nome_personalizado.value if input_nome_personalizado.value else dispositivos_online.value, weight=ft.FontWeight.BOLD),
                         ft.Text(dispositivos_online.value, size=12, color="#8D8D99")
                     ], expand=True),
-                    ft.IconButton(ft.Icons.DELETE, icon_color="#F75A68", on_click=remover_dispositivo)
+                    ft.IconButton(ft.icons.DELETE, icon_color="#F75A68", on_click=remover_dispositivo)
                 ]),
                 padding=10, bgcolor="#202024", border_radius=8
             )
@@ -146,12 +146,12 @@ def main(page: ft.Page):
         lista_whitelist
     ], scroll=ft.ScrollMode.AUTO, spacing=15)
 
-    # Abas atualizadas e integradas diretamente no formato moderno do Flet v0.22+
+    # Abas com os nomes de ícones minúsculos corrigidos (ft.icons.WIFI e ft.icons.SECURITY)
     tabs = ft.Tabs(
         selected_index=0,
         expand=1,
         tabs=[
-            ft.Tab(text="Wi-Fi", icon=ft.Icons.WIFI, content=ft.Container(content=wifi_view, padding=15)),
+            ft.Tab(text="Wi-Fi", icon=ft.icons.WIFI, content=ft.Container(content=wifi_view, padding=15)),
             ft.Tab(text="Whitelist", icon=ft.Icons.SECURITY, content=ft.Container(content=whitelist_view, padding=15)),
         ],
     )
@@ -167,5 +167,5 @@ def main(page: ft.Page):
 
     threading.Thread(target=async_carregar, daemon=True).start()
 
-# CONFIGURAÇÃO DE ACESSO DA FASTAPI PARA O RENDER
+# CONEXÃO DO APP COMPATÍVEL COM O SERVIDOR DO RENDER
 app = flet_fastapi.app(main)
