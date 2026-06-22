@@ -170,4 +170,6 @@ def main(page: ft.Page):
     threading.Thread(target=async_carregar, daemon=True).start()
 
 # IMPORTANTE: Configurado para rodar como WEB APP na nuvem
-ft.app(target=main, view=ft.AppView.WEB_BROWSER)
+# Em vez de rodar direto, criamos a variável 'app' que o Render precisa
+app = ft.app(target=main, assets_dir="assets", view=ft.AppView.WEB_BROWSER, export_asgi=True)
+
