@@ -152,7 +152,7 @@ def main(page: ft.Page):
         expand=1,
         tabs=[
             ft.Tab(text="Wi-Fi", icon=ft.icons.WIFI, content=ft.Container(content=wifi_view, padding=15)),
-            ft.Tab(text="Whitelist", icon=ft.Icons.SECURITY, content=ft.Container(content=whitelist_view, padding=15)),
+            ft.Tab(text="Whitelist", icon=ft.icons.SECURITY, content=ft.Container(content=whitelist_view, padding=15)),
         ],
     )
     page.add(tabs)
