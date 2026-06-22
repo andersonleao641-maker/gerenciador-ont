@@ -1,5 +1,5 @@
 import flet as ft
-import flet_fastapi
+import flet.fastapi as flet_fastapi
 import requests
 import threading
 import time
@@ -174,6 +174,7 @@ def main(page: ft.Page):
 # Em vez de rodar direto, criamos a variável 'app' que o Render precisa
 # FORMATO OFICIAL RECENTE DO FLET PARA NUVEM (UVICORN):
 app = flet_fastapi.app(main)
+
 
 
 
