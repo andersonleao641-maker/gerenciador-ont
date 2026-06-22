@@ -1,5 +1,5 @@
-flet
+flet==0.21.0
 gunicorn
 requests
 uvicorn
-flet-fastapi
+flet-fastapi==0.21.0
